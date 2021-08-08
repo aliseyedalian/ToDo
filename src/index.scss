@@ -3,7 +3,7 @@
     height: 150px;
     background-color: steelblue;
     padding: 20px;
-    border: 1px solid steelblue;
+    border: 1px solid blue;
     text-align: center;
     margin: 10px;
     box-shadow: 2px 6px 12px rgba(0, 0 , 0 , 0.6);
@@ -20,6 +20,7 @@
 }
 
 .btn-group button {
+    margin-top: 10px;
     padding: 10px 30px; /* Some padding */
     margin: 2px;
     width: 50%; /* Set a width if needed */

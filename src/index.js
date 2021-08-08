@@ -15,7 +15,10 @@ class Note extends React.Component {
   }
   save = () => {
       this.props.onChange(this.refs.newText.value , this.props.id)
-      this.setState({editing: false})
+      this.setState({
+        editing: false ,
+        text: this.refs.newText.value
+      })
   }
   cancle = () => {
     this.setState({editing: false})
@@ -27,7 +30,7 @@ class Note extends React.Component {
       return(
           <div className="note">
             <div className="form-group row">
-              <textarea ref = "newText"></textarea>    
+              <textarea type="text" ref = "newText">{this.state.text}</textarea>    
               <div className="btn-group">
                 <button onClick={this.save} className="btn btn-primary btn-sm">Save</button>
                 <button onClick={() => this.cancle()} className='btn btn-primary btn-sm'>Cancle</button>
